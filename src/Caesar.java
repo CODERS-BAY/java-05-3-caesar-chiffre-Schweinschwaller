@@ -37,11 +37,11 @@ public class Caesar {
 
         // Verschlüsseln.
         for (int i = 0; i < message.length(); i++) {
-            if (message.charAt(i) != ' ') {
+            if (message.charAt(i) >= 'A' && message.charAt(i) <= 'Z') {
                 indexABC = message.charAt(i) - 'A';
                 encryptMessage += abc2.charAt(indexABC + chiffre);
             } else {
-                encryptMessage += ' ';
+                encryptMessage += message.charAt(i);
             }
         }
         return encryptMessage;
@@ -56,11 +56,11 @@ public class Caesar {
 
         for (int i = 1; i < abc.length(); i++) {
             for (int j = 0; j < message.length(); j++) {
-                if (message.charAt(j) != ' ') {
+                if (message.charAt(j) >= 'A' && message.charAt(j) <= 'Z') {
                     indexABC = message.charAt(j) - 'A';
                     decryptMessage += abc2.charAt(indexABC + i);
                 } else {
-                    decryptMessage += ' ';
+                    decryptMessage += message.charAt(j);
                 }
             }
             System.out.println((i) + ". " + decryptMessage);
@@ -76,12 +76,12 @@ public class Caesar {
         String decryptMessage = "";
         message = message.toUpperCase();
 
-        for (int j = 0; j < message.length(); j++) {
-            if (message.charAt(j) != ' ') {
-                indexABC = message.charAt(j) - 'A';
+        for (int i = 0; i < message.length(); i++) {
+            if (message.charAt(i) >= 'A' && message.charAt(i) <= 'Z') {
+                indexABC = message.charAt(i) - 'A';
                 decryptMessage += abc2.charAt(indexABC + helpchiffre);
             } else {
-                decryptMessage += ' ';
+                decryptMessage += message.charAt(i);
             }
         }
         System.out.println(decryptMessage);
