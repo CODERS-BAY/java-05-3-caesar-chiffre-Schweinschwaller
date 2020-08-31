@@ -73,17 +73,17 @@ public class Caesar {
         String abc2 = abc + abc;
         int helpchiffre = abc.length() - chiffre;
         int indexABC = 0;
-        String sText = "";
+        String decryptMessage = "";
         message = message.toUpperCase();
 
         for (int j = 0; j < message.length(); j++) {
             if (message.charAt(j) != ' ') {
                 indexABC = message.charAt(j) - 'A';
-                sText += abc2.charAt(indexABC + helpchiffre);
+                decryptMessage += abc2.charAt(indexABC + helpchiffre);
             } else {
-                sText += ' ';
+                decryptMessage += ' ';
             }
         }
-        System.out.println(sText);
+        System.out.println(decryptMessage);
     }
 }
