@@ -4,8 +4,8 @@ import java.util.Random;
 public class Caesar {
     public static void main(String[] args) {
 
-        Random zufall = new Random();
-        int chiffre = zufall.nextInt(26);
+        Random fortuna = new Random();
+        int chiffre = fortuna.nextInt(26);
 
         System.out.println("The message:");
         Scanner s = new Scanner(System.in);
